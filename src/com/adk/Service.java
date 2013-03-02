@@ -19,14 +19,8 @@ public class Service {
 		
 		try{
 			clickDao.save(click);
-			
 
-			//get # of clicks
-			List<Click> clicks = new ArrayList<Click>();
-			
-			clicks = clickDao.findAll();
-			
-			return clicks.size();
+			return this.getTotalClicks();
 		} catch (Exception e){
 			System.out.println(e.getMessage());
 		}
